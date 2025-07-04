@@ -27,7 +27,7 @@ def get_ai_summary(log_entry):
                     "Map the detected activity to the MITRE ATT&CK framework if possible. "
                     "Do not add any recommendations or remediation steps. "
                     "Output format: \n"
-                    "Timestamp: <timestamp>\n"
+                   # "Timestamp: <timestamp>\n"
                     "Summary: <brief summary>\n"
                     "MITRE Technique: <technique name and ID if identified>"
                 )
