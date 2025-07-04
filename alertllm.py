@@ -22,7 +22,7 @@ def get_ai_summary(log_entry):
             {
                 "role": "system",
                 "content": (
-                    "You are an AI SOC analyst. Focus on analyzing Honeypot alerts. "
+                    "You are an AI SOC analyst. Focus on analyzing Security alerts. "
                     "Extract only relevant attacker activity from the Snort alert. "
                     "Map the detected activity to the MITRE ATT&CK framework if possible. "
                     "Do not add any recommendations or remediation steps. "
@@ -57,7 +57,7 @@ def tail_f(f):
         yield line.strip()
 
 # === Main Monitor ===
-print("Groq-powered Honeypot Monitor started...")
+print("Groq-powered Security Monitor started...")
 alert_counter = 0  # Initialize alert counter
 
 try:
@@ -67,7 +67,7 @@ try:
                 alert_counter += 1  # Increment counter for each alert
                 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 print("\n" + "="*60)
-                print(f"              Honeypot Alert #{alert_counter}")
+                print(f"              Security Alert #{alert_counter}")
                 print("="*60)
                 print(f"Detection Timestamp: {timestamp}")
                 print(f"Snort Alert: {line}")
